@@ -24,6 +24,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-items">
+          
           <NavLink
             to="/"
             className="navbar-item"
@@ -70,6 +71,30 @@ const Navbar = () => {
           >
             Schedule
           </NavLink>
+          <NavLink
+          to="/contacttable"
+          className="navbar-item"
+          style={{
+            borderBottom:
+              location.pathname === "/contacttable" ? "2px solid white" : "none",
+          }}
+
+          onClick={closeSidebar}
+          >
+          Contact Table
+          </NavLink>
+          <NavLink
+          to="/membershiptable"
+          className="navbar-item"
+          style={{
+            borderBottom:
+              location.pathname === "/membershiptable" ? "2px solid white" : "none",
+          }}
+
+          onClick={closeSidebar}
+          >
+          Membership Table
+          </NavLink>
         </div>
         <div className="navbar-icon" onClick={toggleSidebar}>
           {showSidebar ? <FaTimes /> : <FaBars />}
@@ -102,6 +127,20 @@ const Navbar = () => {
             >
               About
             </NavLink>
+          <NavLink
+          to="/contacttable"
+          className="sidebar-item"
+          onClick={closeSidebar}
+          >
+          Contact Table
+          </NavLink>
+          <NavLink
+          to="/membershiptable"
+          className="sidebar-item"
+          onClick={closeSidebar}
+          >
+          Membership Table
+          </NavLink>
           </div>
         </div>
       )}
